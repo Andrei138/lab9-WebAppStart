@@ -22,14 +22,15 @@ public class SomeServlet extends HttpServlet {
         //get input as string
         String Produs = request.getParameter("Produs");
         String Cantitate = request.getParameter("Cantitate");
+        Article SomeServlet = new Article(Produs, Cantitate);
+
 
         System.out.println(Produs + Cantitate);
         // write results to response
         resp.setContentType("text/html;charset=UTF-8");
         PrintWriter out = resp.getWriter();
         out.println("<h2>Asta e tot? </h2>");
-        out.println("Produs - <b>" + Produs + "</b><br/>");
-        out.println("Cantitate - <b>" + Cantitate + "</b><br/>");
+        out.println("<b>" + SomeServlet.toString() + "</b><br />");
         out.println("<a href='/'>Go Back</a>");
 
         // finished writing, send to browser
