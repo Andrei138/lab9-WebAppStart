@@ -29,7 +29,8 @@ public class SomeServlet extends HttpServlet {
         // write results to response
         resp.setContentType("text/html;charset=UTF-8");
         PrintWriter out = resp.getWriter();
-        out.println("<h2>Asta e tot? </h2>");
+        out.println("<h3>Asta e tot? </h3>");
+        out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"css/style.css\">");
         out.println("<b>" + SomeServlet.toString() + "</b><br />");
         out.println("<a href='/'>Go Back</a>");
 
