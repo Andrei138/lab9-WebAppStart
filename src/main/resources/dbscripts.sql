@@ -1,9 +1,11 @@
 CREATE TABLE article (
- +    id bigserial NOT NULL PRIMARY KEY,
- +    link character(300) NOT NULL,
- +    domain character(40),
- +    summary character(120),
- +    date DATE NOT NULL default CURRENT_DATE);
- );
+    id bigserial NOT NULL PRIMARY KEY,
+    Product character(20),
+    Quantity int
 
-INSERT INTO article( link, domain, summary, date) VALUES ('ardei', '7')
+)
+
+INSERT INTO article(Product, Quantity) VALUES ('rosii', 2);
+INSERT INTO article(Product, Quantity) VALUES ('mere', 2);
+INSERT INTO article(Product, Quantity) VALUES ('pere', 2);
+INSERT INTO article(Product, Quantity) VALUES ('caise', 2);

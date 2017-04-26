@@ -1,33 +1,39 @@
+/**
+ * Created by dell on 12-Apr-17.
+ */
 package my.apps.web;
 
-/**
- * Created by dell on 21-Feb-17.
- */
 public class Article {
-     private String Produs;
-     private String Cantitate;
+    private Long id;
+    private String product;
+    private int quantity;
 
+    public Article(String product, int quantity) {
+        this.product = product;
+        this.quantity = quantity;
+    }
 
-             public Article(String Produs, String Cantitate) {
-                this.Produs = Produs;
-                this.Cantitate = Cantitate;
-             }
+    public Long getId() {
+        return id;
+    }
 
-             public String getProdus() {
-              return Produs;
-           }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-             public String getCantitate() {
-                return Cantitate;
-            }
+    public String getProduct() {
+        return product;
+    }
 
+    public int getQuantity() {
+        return quantity;
+    }
 
-
-             @Override
-     public String toString() {
-                return "Article{" +
-                                "Produs='" + Produs + '\'' +
-                                ", Cantitate='" + Cantitate + '\'' +
-                                '}';
-            }
+    @Override
+    public String toString() {
+        return "Article{" +
+                "product='" + product + '\'' +
+                "quantity='" + quantity + '\'' +
+                "}";
+    }
 }
